@@ -29,6 +29,7 @@
 -->
   <script>
     "use strict";
+
     const userNumber = +prompt('Введите число');
 
     const units = userNumber % 10;
@@ -40,18 +41,18 @@
 
 
     /* мой код оказался чуть длиннее)))) и поняла теперь разницу в том,
-        где лучше использовать parseInt, а где Math
+    где лучше использовать parseInt, а где Math
     
-        const userNumber = prompt('Введите целое положительное число');
-        let number = Number.parseInt(userNumber);
+    const userNumber = prompt('Введите целое положительное число');
+    let number = Number.parseInt(userNumber);
     
-        const units = number % 10;
-        number = Number.parseInt(number / 10);
-        const tens = number % 10;
-        number = Number.parseInt(number / 10);
-        const hundreds = number % 10;
+    const units = number % 10;
+    number = Number.parseInt(number / 10);
+    const tens = number % 10;
+    number = Number.parseInt(number / 10);
+    const hundreds = number % 10;
     
-        alert(`В числе ${userNumber} количество сотен: ${hundreds}, десятков: \
+    alert(`В числе ${userNumber} количество сотен: ${hundreds}, десятков: \
 ${tens}, единиц: ${units}`);
     */
 
