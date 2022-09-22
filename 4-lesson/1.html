@@ -28,7 +28,7 @@
     }
 
     ProductES5.prototype.make25Discount = function () {
-      this.price = (this.price * .75).toFixed(2);
+      this.price = this.price * .75;
     };
 
     const product1 = new ProductES5('banana', 56.54);
@@ -39,11 +39,11 @@
       constructor(name, price) {
         this.name = name;
         this.price = price;
-      };
+      }
 
       make25Discount() {
-        this.price = (this.price * .75).toFixed(2);
-      };
+        this.price = this.price * .75;
+      }
     }
 
     const product2 = new ProductES6('pineapple', 120);
