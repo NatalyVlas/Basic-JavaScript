@@ -107,12 +107,16 @@
           el.classList.add('error');
           event.preventDefault();
         }
-        el.addEventListener('input', event => {
-          event.target.value !== ''
-            ? el.classList.remove('error')
-            : el.classList.add('error');
-        });
       });
+    });
+
+    formEl.addEventListener('input', event => {
+      if (!event.target.classList.contains('form-control')) {
+        return;
+      }
+      event.target.value === ''
+        ? event.target.classList.add('error')
+        : event.target.classList.remove('error');
     });
 
   </script>

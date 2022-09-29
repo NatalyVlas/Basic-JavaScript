@@ -67,8 +67,7 @@
       }
       event.target.textContent = 'Добавлено';
       event.target.disabled = true;
-    }
-    );
+    });
 
     /*
     4. Создайте полную (глубокую) копию элемента с классом product, измените в
@@ -79,26 +78,18 @@
     должен правильно работать код из 3-го задания.
      */
     const prodElClone = document.querySelector('.product').cloneNode(true);
-    prodElClone.querySelector('img').setAttribute(
-      'src', 'https://loremflickr.com/200/300/goods?lock=37'
-    );
+    prodElClone.querySelector('img')
+      .src = 'https://loremflickr.com/200/300/goods?lock=37';
     prodElClone.querySelector('.productName').textContent = 'Товар 4';
-    console.log(prodElClone);
 
     const prodLastChild = document.querySelector('.product:last-of-type');
-    console.log(prodLastChild);
     prodLastChild.replaceWith(prodElClone);
 
     /*
     5. По истечении 2 секунд с момента открытия страницы первый товар должен быть
     удален из html.
      */
-    const prodEl = document.querySelector('.product');
-    function deleteEl() {
-      prodEl.remove();
-    }
-
-    setTimeout(deleteEl, 2000);
+    setTimeout(() => document.querySelector('.product').remove(), 2000);
 
   </script>
 </body>
